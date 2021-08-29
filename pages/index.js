@@ -1,6 +1,38 @@
 import Head from "next/head";
 import Image from "next/image";
 
+function Section1() {
+  return (
+    <div className="py-16 px-4 text-center">
+      <Image
+        src="/images/ImageSection1.png"
+        alt="Section 1 Image"
+        height="204"
+        width="304"
+        className=""
+      />
+      <h3 className="text-grey24 text-center px-[71px] mt-6 mb-4">
+        Share your home, nanny and costs
+      </h3>
+      <p className="body-medium text-center mb-6">
+        You have a fantastic home, a fantastic nanny and wouldn’t cutting your
+        costs in half be, well, fantastic?! If only it was easy to connect with
+        other parents to share your costs? Well now it is, with Hapu.{" "}
+        <a href="http://" className="text-secondary">
+          Hapu means tribe
+        </a>{" "}
+        and it’s our foundational 3 tribal principles that empowers you to
+        create and manage your own tribe. A tribe that together has the power to
+        create new affordable solutions in childcare that work for you and your
+        community.
+      </p>
+      <a href="http://" className="text-secondary">
+        Ready to get started?
+      </a>
+    </div>
+  );
+}
+
 function EventSection() {
   return (
     <div className="flex flex-col items-center py-8 border-b border-grey88 bg-white desktop:flex-row desktop:justify-center desktop:py-7">
@@ -72,7 +104,7 @@ function HeroText() {
         Easily create or join a local nanny share with Hapu
       </h2>
 
-      <h3 className="body-medium text-center mb-[66px] desktop:body-large desktop:text-left desktop:w-[584px] desktop:mr-[184px] desktop:mb-10">
+      <h3 className="body-medium text-white text-center mb-[66px] desktop:body-large desktop:text-left desktop:w-[584px] desktop:mr-[184px] desktop:mb-10">
         Hapu is Airbnb for nanny share. Share your home, nanny and costs and
         create new flexible, affordable solutions in childcare.
       </h3>
@@ -150,6 +182,8 @@ export default function Home() {
 
       <Hero />
       <EventSection />
+      <Section1 />
+      <hr className="border-2 border-grey88" />
     </div>
   );
 }

@@ -12,8 +12,6 @@
 
     /* identical to box height, or 120% */
     letter-spacing: -1px;
-
-    color: white;
   }
 
   h2 {
@@ -24,8 +22,6 @@
     line-height: 32px;
 
     /* identical to box height, or 114% */
-
-    color: white;
   }
 
   h3 {
@@ -122,6 +118,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 28px;
+    color: #4a4a4a;
 
     /* or 175% */
   }

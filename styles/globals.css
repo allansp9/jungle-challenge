@@ -1,3 +1,173 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+
+    /* identical to box height, or 120% */
+    letter-spacing: -1px;
+
+    color: white;
+  }
+
+  h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+
+    /* identical to box height, or 114% */
+
+    color: white;
+  }
+
+  h3 {
+    /* H3 (M22) */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+
+    /* identical to box height, or 145% */
+
+    color: #c4c4c4;
+  }
+
+  h4 {
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    /* identical to box height, or 150% */
+
+    color: #c4c4c4;
+  }
+
+  h5 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    /* identical to box height, or 143% */
+
+    color: white;
+  }
+
+  a:link {
+    /* Link (M16) */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    /* identical to box height, or 150% */
+    text-decoration-line: underline;
+
+    color: white;
+  }
+}
+
+@layer utilities {
+  .hero-wrapper {
+    background: linear-gradient(
+      314.72deg,
+      #c86dd7 -1.5%,
+      #7e49c3 39.43%,
+      #5912ac 86.02%
+    );
+  }
+
+  .hero-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: overlay;
+    opacity: 0.8;
+  }
+
+  .hero-btn {
+    border-radius: 4px;
+    height: 44px;
+    width: 234px;
+  }
+
+  .body-large {
+    /* Body / Large (R18) */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+
+    /* identical to box height, or 133% */
+
+    color: white;
+  }
+
+  .body-medium {
+    /* Body / Medium (R16) */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+
+    /* or 175% */
+
+    color: white;
+  }
+
+  .body-small {
+    /* Body / Small (R14) */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+    /* identical to box height, or 143% */
+
+    color: #c4c4c4;
+  }
+
+  .body-x-small {
+    /* Body / X-Small (R12) */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    /* identical to box height, or 133% */
+
+    color: #c4c4c4;
+  }
+
+  .dp1 {
+    /* 1dp */
+
+    background: #c4c4c4;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+}

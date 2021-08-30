@@ -1,6 +1,33 @@
 import Head from "next/head";
 import Image from "next/image";
 
+function ComingSoonSection() {
+  return (
+    <div className="py-16 flex flex-col items-center desktop:pt-[96px] desktop:pb-[120px]">
+      <div className="flex-none mb-[24px] desktop:mb-[40px]">
+        <Image
+          src="/images/ImageSection5.png"
+          alt="Section 5 Image"
+          height="96"
+          width="216"
+        />
+      </div>
+      <h3 className="text-grey24 text-center px-[16px] mb-[16px] desktop:hidden">
+        Coming soon: Nanny Share Daily Diary!
+      </h3>
+      <h2 className="hidden desktop:inline-block text-grey24 text-center px-[16px] mb-[40px]">
+        Coming soon: Nanny Share Daily Diary!
+      </h2>
+      <p className="text-grey24 text-center px-[16px] desktop:px-[328px]">
+        With the Hapu daily diary your nanny will be able to update you and your
+        sharers with photos and commentary of the day. You and sharers will
+        receive notifications and you’ll be able to login to view the daily
+        adventures fo your little ones. We can’t wait!
+      </p>
+    </div>
+  );
+}
+
 function FrameworkSection() {
   return (
     <div>
@@ -42,7 +69,7 @@ function FrameworkSection() {
         <div className="flex-none">
           <Image
             src="/images/ImageSection4.png"
-            alt="Section 1 Image"
+            alt="Section 4 Image"
             height="392"
             width="984"
           />
@@ -58,7 +85,7 @@ function PaymentSection() {
       <div className="desktop:hidden">
         <Image
           src="/images/ImageSection3.png"
-          alt="Section 1 Image"
+          alt="Section 3 Image"
           height="230"
           width="312"
         />
@@ -66,7 +93,7 @@ function PaymentSection() {
       <div className="hidden desktop:block flex-none">
         <Image
           src="/images/ImageSection3.png"
-          alt="Section 1 Image"
+          alt="Section 3 Image"
           height="336"
           width="456"
         />
@@ -365,6 +392,7 @@ export default function Home() {
       <hr className="border-2 border-grey88 h-0" />
       <FrameworkSection />
       <hr className="border-2 border-grey88 h-0" />
+      <ComingSoonSection />
     </div>
   );
 }

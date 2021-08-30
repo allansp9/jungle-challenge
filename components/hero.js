@@ -1,5 +1,18 @@
 import Image from "next/image";
 
+import {
+  Experiment,
+  Variant,
+  emitter,
+  experimentDebugger,
+} from "@marvelapp/react-ab-test";
+
+emitter.defineVariants(
+  "heroSectionExperiment",
+  ["control", "variant"],
+  [50, 50]
+);
+
 function Header() {
   return (
     <nav className="text-white pb-[92px]">
@@ -35,18 +48,37 @@ function Header() {
 function HeroText() {
   return (
     <div className="desktop:pl-28">
-      <h1 className="hidden text-white desktop:inline-block w-[490px] pb-6">
-        Easily create or join a local nanny share with Hapu
-      </h1>
+      <Experiment name="heroSectionExperiment">
+        <Variant name="control">
+          <h1 className="hidden text-white desktop:inline-block w-[490px] pb-6">
+            Easily create or join a local nanny share with Hapu
+          </h1>
 
-      <h2 className="desktop:hidden text-white text-center mb-4">
-        Easily create or join a local nanny share with Hapu
-      </h2>
+          <h2 className="desktop:hidden text-white text-center mb-4">
+            Easily create or join a local nanny share with Hapu
+          </h2>
 
-      <h3 className="body-medium text-white text-center mb-[66px] desktop:body-large desktop:text-left desktop:w-[584px] desktop:mr-[184px] desktop:mb-10">
-        Hapu is Airbnb for nanny share. Share your home, nanny and costs and
-        create new flexible, affordable solutions in childcare.
-      </h3>
+          <h3 className="body-medium text-white text-center mb-[66px] desktop:body-large desktop:text-left desktop:w-[584px] desktop:mr-[184px] desktop:mb-10">
+            Hapu is Airbnb for nanny share. Share your home, nanny and costs and
+            create new flexible, affordable solutions in childcare.
+          </h3>
+        </Variant>
+
+        <Variant name="variant">
+          <h1 className="hidden text-white desktop:inline-block w-[490px] pb-6">
+            Create the childcare you need at a price you can afford
+          </h1>
+
+          <h2 className="desktop:hidden text-white text-center mb-4">
+            Create the childcare you need at a price you can afford
+          </h2>
+
+          <h3 className="body-medium text-white text-center mb-[66px] desktop:body-large desktop:text-left desktop:w-[584px] desktop:mr-[184px] desktop:mb-10">
+            Connect with other local families to share a nanny from as low as
+            $10.00/hr each. Create your family profile today to get started.
+          </h3>
+        </Variant>
+      </Experiment>
       <div className="flex items-center">
         <div className="pr-4">
           <Image

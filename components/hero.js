@@ -128,19 +128,6 @@ function Hero() {
     <div className="hero-wrapper relative h-[540px] desktop:h-[616px] overflow-hidden">
       {/* hero bg */}
 
-      {/* <Image
-        src="/images/herobg-mobile.png"
-        alt="Hero background Image"
-        blurDataURL="/images/herobg-mobile.png"
-        placeholder="blur"
-        height="540"
-        width="360"
-        layout="responsive"
-        objectPosition="center"
-        objectFit="cover"
-        className="visible desktop:invisible opacity-80 mix-blend-overlay"
-      /> */}
-
       <Image
         src="/images/Image@3x.png"
         alt="Hero background Image"
@@ -151,13 +138,13 @@ function Hero() {
         priority={true}
         objectFit="cover"
         objectPosition="center top"
-        className=""
+        className="hero-bg"
       />
 
       {/* hero content */}
       <div className="absolute top-0 z-1 w-full">
         <Header />
-        <div className="flex px-[16px]">
+        <div className="flex px-[16px] justify-center">
           <HeroText />
           <div className="hidden laptop:block">
             <Image

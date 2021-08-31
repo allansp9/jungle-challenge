@@ -3,70 +3,43 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply font-inter;
+    @apply not-italic;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-medium;
+  }
+
   h1 {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
     font-size: 40px;
     line-height: 48px;
-
-    /* identical to box height, or 120% */
     letter-spacing: -1px;
   }
 
   h2 {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
     font-size: 28px;
     line-height: 32px;
-
-    /* identical to box height, or 114% */
   }
 
   h3 {
-    /* H3 (M22) */
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
     font-size: 22px;
     line-height: 32px;
-
-    /* identical to box height, or 145% */
   }
 
   h4 {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-
-    /* identical to box height, or 150% */
   }
 
   h5 {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-
-    /* identical to box height, or 143% */
-  }
-
-  a:link {
-    /* Link (M16) */
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-
-    /* identical to box height, or 150% */
-    text-decoration-line: underline;
   }
 }
 
@@ -96,52 +69,31 @@
     width: 234px;
   }
 
-  .body-large {
-    /* Body / Large (R18) */
+  .body-large,
+  .body-medium,
+  .body-small,
+  .body-x-small {
+    @apply font-normal;
+  }
 
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
+  .body-large {
     font-size: 18px;
     line-height: 24px;
-
-    /* identical to box height, or 133% */
   }
 
   .body-medium {
-    /* Body / Medium (R16) */
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     line-height: 28px;
-
-    /* or 175% */
   }
 
   .body-small {
-    /* Body / Small (R14) */
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
-
-    /* identical to box height, or 143% */
   }
 
   .body-x-small {
-    /* Body / X-Small (R12) */
-
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 16px;
-
-    /* identical to box height, or 133% */
   }
 
   .dp1 {

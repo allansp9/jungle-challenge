@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   Experiment,
@@ -22,22 +23,38 @@ function Header() {
 
           <div className="mt-2 flex space-x-8">
             <div className="h-11 items-center hidden desktop:flex">
-              <h5>Create Your Nanny Share</h5>
+              <h5>
+                <Link href="/">
+                  <a>Create Your Nanny Share</a>
+                </Link>
+              </h5>
             </div>
             <div className="h-11 items-center hidden desktop:flex">
-              <h5>Browse Shares</h5>
+              <h5>
+                <Link href="/">
+                  <a>Browse Shares</a>
+                </Link>
+              </h5>
             </div>
             <div className="h-11 items-center hidden desktop:flex">
-              <h5>Our Story</h5>
+              <h5>
+                <Link href="/">
+                  <a>Our Story</a>
+                </Link>
+              </h5>
             </div>
           </div>
         </div>
         <div className="flex space-x-6 desktop:pr-8 items-center mt-2">
-          <div className="hero-btn bg-primary flex justify-center items-center">
+          <button className="hero-btn bg-primary flex justify-center items-center">
             <h5>Become a Nanny Share Host</h5>
-          </div>
+          </button>
           <div className="h-11 items-center hidden desktop:flex">
-            <h5>Sign In</h5>
+            <h5>
+              <Link href="/">
+                <a>Sign In</a>
+              </Link>
+            </h5>
           </div>
         </div>
       </div>
@@ -88,9 +105,11 @@ function HeroText() {
             width="48"
           />
         </div>
-        <a href="http://" className="text-white">
-          See hapu in action (27 seconds)
-        </a>
+        <Link href="/">
+          <a className="text-white underline font-inter">
+            See hapu in action (27 seconds)
+          </a>
+        </Link>
       </div>
     </div>
   );

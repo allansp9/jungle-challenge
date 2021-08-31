@@ -19,6 +19,9 @@ module.exports = {
         grey24: "#3D3D3D",
         grey88: "#DFDFDF",
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
   variants: {

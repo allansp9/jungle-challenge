@@ -16,7 +16,7 @@ emitter.defineVariants(
 
 function Header() {
   return (
-    <nav className="text-white pb-[92px]">
+    <nav className="text-white pb-[92px] pl-[16px]">
       <div className="flex justify-between">
         <div className="flex space-x-8 items-center">
           <Image
@@ -28,21 +28,21 @@ function Header() {
           />
 
           <div className="mt-2 flex space-x-8">
-            <div className="h-11 items-center hidden desktop:flex">
+            <div className="h-11 items-center hidden laptop:flex">
               <h5>
                 <Link href="/">
                   <a>Create Your Nanny Share</a>
                 </Link>
               </h5>
             </div>
-            <div className="h-11 items-center hidden desktop:flex">
+            <div className="h-11 items-center hidden laptop:flex">
               <h5>
                 <Link href="/">
                   <a>Browse Shares</a>
                 </Link>
               </h5>
             </div>
-            <div className="h-11 items-center hidden desktop:flex">
+            <div className="h-11 items-center hidden laptop:flex">
               <h5>
                 <Link href="/">
                   <a>Our Story</a>
@@ -51,11 +51,11 @@ function Header() {
             </div>
           </div>
         </div>
-        <div className="flex space-x-6 desktop:pr-8 items-center mt-2">
+        <div className="flex space-x-6 pr-[16px] tablet:pr-8 items-center mt-2">
           <button className="hero-btn bg-primary flex justify-center items-center">
             <h5>Become a Nanny Share Host</h5>
           </button>
-          <div className="h-11 items-center hidden desktop:flex">
+          <div className="h-11 items-center hidden tablet:flex">
             <h5>
               <Link href="/">
                 <a>Sign In</a>
@@ -70,39 +70,39 @@ function Header() {
 
 function HeroText() {
   return (
-    <div className="desktop:pl-28">
+    <div className="tablet:pl-28">
       <Experiment name="heroSectionExperiment">
         <Variant name="control">
-          <h1 className="hidden text-white desktop:inline-block w-[490px] pb-6">
+          <h1 className="hidden text-white tablet:inline-block w-[490px] pb-6">
             Easily create or join a local nanny share with Hapu
           </h1>
 
-          <h2 className="desktop:hidden text-white text-center mb-4">
+          <h2 className="tablet:hidden text-white text-center mb-4">
             Easily create or join a local nanny share with Hapu
           </h2>
 
-          <h3 className="body-medium text-white text-center mb-[66px] desktop:body-large desktop:text-left desktop:w-[584px] desktop:mr-[184px] desktop:mb-10">
+          <h3 className="body-medium text-white text-center mb-[66px] tablet:body-large tablet:text-left tablet:w-[584px] tablet:mr-[184px] tablet:mb-10">
             Hapu is Airbnb for nanny share. Share your home, nanny and costs and
             create new flexible, affordable solutions in childcare.
           </h3>
         </Variant>
 
         <Variant name="variant">
-          <h1 className="hidden text-white desktop:inline-block w-[490px] pb-6">
+          <h1 className="hidden text-white tablet:inline-block w-[490px] pb-6">
             Create the childcare you need at a price you can afford
           </h1>
 
-          <h2 className="desktop:hidden text-white text-center mb-4">
+          <h2 className="tablet:hidden text-white text-center mb-4">
             Create the childcare you need at a price you can afford
           </h2>
 
-          <h3 className="body-medium text-white text-center mb-[66px] desktop:body-large desktop:text-left desktop:w-[584px] desktop:mr-[184px] desktop:mb-10">
+          <h3 className="body-medium text-white text-center mb-[66px] tablet:body-large tablet:text-left tablet:w-[584px] tablet:mr-[184px] tablet:mb-10">
             Connect with other local families to share a nanny from as low as
             $10.00/hr each. Create your family profile today to get started.
           </h3>
         </Variant>
       </Experiment>
-      <div className="flex items-center">
+      <div className="flex items-center justify-center">
         <div className="pr-4">
           <Image
             src="/images/play.svg"
@@ -125,50 +125,48 @@ function HeroText() {
 function Hero() {
   return (
     // hero wrapper
-    <div className="hero-wrapper px-4 h-[540px] desktop:h-[616px] overflow-hidden relative">
+    <div className="hero-wrapper relative h-[540px] desktop:h-[616px] overflow-hidden">
       {/* hero bg */}
-      <Image
-        src="/images/herobg-desktop.png"
-        blurDataURL="/images/herobg-desktop.png"
-        alt="Hero background Image"
-        priority={true}
-        placeholder="blur"
-        // height="616"
-        // width="1440"
-        layout="fill"
-        objectPosition="center"
-        objectFit="cover"
-        className="invisible desktop:visible hero-bg"
-      />
-      <Image
+
+      {/* <Image
         src="/images/herobg-mobile.png"
         alt="Hero background Image"
-        priority={true}
         blurDataURL="/images/herobg-mobile.png"
         placeholder="blur"
-        // height="616"
-        // width="1440"
-        layout="fill"
+        height="540"
+        width="360"
+        layout="responsive"
         objectPosition="center"
         objectFit="cover"
         className="visible desktop:invisible opacity-80 mix-blend-overlay"
+      /> */}
+
+      <Image
+        src="/images/Image@3x.png"
+        alt="Hero background Image"
+        // height="1848"
+        // width="4320"
+        layout="fill"
+        quality="50"
+        priority={true}
+        objectFit="cover"
+        objectPosition="center top"
+        className=""
       />
 
       {/* hero content */}
-      <div className="relative">
+      <div className="absolute top-0 z-1 w-full">
         <Header />
-        <div className="flex">
+        <div className="flex px-[16px]">
           <HeroText />
-          <div className="hidden desktop:block">
+          <div className="hidden laptop:block">
             <Image
               src="/images/ImageHeader.png"
-              blurDataURL="/images/ImageHeader.png"
               alt="Hero Image"
               priority={true}
-              placeholder="blur"
               height="290"
               width="316"
-              className="hidden"
+              layout="fixed"
             />
           </div>
         </div>

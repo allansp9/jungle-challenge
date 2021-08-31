@@ -3,9 +3,9 @@ import Link from "next/link";
 
 function SectionOne() {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       {/* mobile */}
-      <div className="desktop:hidden py-16 px-4 text-center">
+      <div className="desktop:hidden py-16 text-center">
         <div className="">
           <Image
             src="/images/ImageSection1.png"
@@ -14,7 +14,7 @@ function SectionOne() {
             width="304"
           />
         </div>
-        <div className="">
+        <div>
           <h3 className="text-grey24 text-center px-[71px] mt-6 mb-4">
             Share your home, nanny and costs
           </h3>

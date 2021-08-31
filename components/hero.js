@@ -19,7 +19,13 @@ function Header() {
     <nav className="text-white pb-[92px]">
       <div className="flex justify-between">
         <div className="flex space-x-8 items-center">
-          <Image src="/images/badge.svg" alt="Badge" height="64" width="48" />
+          <Image
+            src="/images/badge.svg"
+            alt="Badge"
+            height="64"
+            width="48"
+            priority={true}
+          />
 
           <div className="mt-2 flex space-x-8">
             <div className="h-11 items-center hidden desktop:flex">
@@ -103,6 +109,7 @@ function HeroText() {
             alt="Play Button"
             height="48"
             width="48"
+            priority={true}
           />
         </div>
         <Link href="/">
@@ -122,7 +129,10 @@ function Hero() {
       {/* hero bg */}
       <Image
         src="/images/herobg-desktop.png"
+        blurDataURL="/images/herobg-desktop.png"
         alt="Hero background Image"
+        priority={true}
+        placeholder="blur"
         // height="616"
         // width="1440"
         layout="fill"
@@ -133,6 +143,9 @@ function Hero() {
       <Image
         src="/images/herobg-mobile.png"
         alt="Hero background Image"
+        priority={true}
+        blurDataURL="/images/herobg-mobile.png"
+        placeholder="blur"
         // height="616"
         // width="1440"
         layout="fill"
@@ -149,7 +162,10 @@ function Hero() {
           <div className="hidden desktop:block">
             <Image
               src="/images/ImageHeader.png"
+              blurDataURL="/images/ImageHeader.png"
               alt="Hero Image"
+              priority={true}
+              placeholder="blur"
               height="290"
               width="316"
               className="hidden"

@@ -21,13 +21,13 @@ export default function Home() {
       <Hero />
       <EventSection />
       <SectionOne />
-      <hr className="border-2 border-grey88 h-0" />
+      <hr className="border border-grey88 h-0 max-w-[784px] m-auto" />
       <SectionTwo />
-      <hr className="border-2 border-grey88 h-0" />
+      <hr className="border border-grey88 h-0 max-w-[784px] m-auto" />
       <SectionThree />
-      <hr className="border-2 border-grey88 h-0" />
+      <hr className="border border-grey88 h-0 max-w-[784px] m-auto" />
       <SectionFour />
-      <hr className="border-2 border-grey88 h-0" />
+      <hr className="border border-grey88 h-0 max-w-[784px] m-auto" />
       <SectionFive />
       <Footer />
     </div>

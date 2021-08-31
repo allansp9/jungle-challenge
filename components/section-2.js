@@ -36,7 +36,7 @@ function SectionTwo() {
       <h3 className="text-center mb-4">
         Are you a parent without a nanny and looking to share?
       </h3>
-      <p className="body-medium text-center mb-8">
+      <p className="body-medium desktop:body-large text-center mb-8 text-grey24">
         Leave us your name and email and we’ll update you as soon as a share
         becomes available in your area!
       </p>

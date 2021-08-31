@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function SectionFour() {
   return (
@@ -16,8 +17,10 @@ function SectionFour() {
             clearly defined process, transparency over money and equality of
             participation.
           </p>
-          <p className="text-secondary text-center px-6">
-            <a href="">Read how Hapu’s tribal background defines our app </a>
+          <p className="text-secondary text-center px-6 underline font-medium">
+            <Link href="/">
+              <a>Read how Hapu’s tribal background defines our app </a>
+            </Link>
           </p>
         </div>
       </div>
@@ -34,16 +37,20 @@ function SectionFour() {
             clearly defined process, transparency over money and equality of
             participation.
           </p>
-          <p className="text-secondary text-center px-6 mb-16">
-            <a href="">Read how Hapu’s tribal background defines our app </a>
+          <p className="text-secondary text-center underline font-medium px-6 mb-16">
+            <Link href="/">
+              <a>Read how Hapu’s tribal background defines our app </a>
+            </Link>
           </p>
         </div>
         <div className="flex-none">
           <Image
             src="/images/ImageSection4.png"
+            blurDataURL="/images/ImageSection4.png"
             alt="Section 4 Image"
             height="392"
             width="984"
+            placeholder="blur"
           />
         </div>
       </div>

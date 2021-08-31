@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function SectionOne() {
   return (
@@ -22,17 +23,21 @@ function SectionOne() {
             your costs in half be, well, fantastic?! If only it was easy to
             connect with other parents to share your costs? Well now it is, with
             Hapu.{" "}
-            <a href="http://" className="text-secondary">
-              Hapu means tribe
-            </a>{" "}
+            <Link href="/">
+              <a className="text-secondary underline font-medium">
+                Hapu means tribe
+              </a>
+            </Link>{" "}
             and it’s our foundational 3 tribal principles that empowers you to
             create and manage your own tribe. A tribe that together has the
             power to create new affordable solutions in childcare that work for
             you and your community.
           </p>
-          <a href="http://" className="text-secondary">
-            Ready to get started?
-          </a>
+          <Link href="/">
+            <a className="text-secondary underline font-medium">
+              Ready to get started?
+            </a>
+          </Link>
         </div>
       </div>
 
@@ -48,24 +53,30 @@ function SectionOne() {
             your costs in half be, well, fantastic?! If only it was easy to
             connect with other parents to share your costs? Well now it is, with
             Hapu.{" "}
-            <a href="http://" className="text-secondary">
-              Hapu means tribe
-            </a>{" "}
+            <Link href="/">
+              <a className="text-secondary underline font-medium">
+                Hapu means tribe
+              </a>
+            </Link>{" "}
             and it’s our foundational 3 tribal principles that empowers you to
             create and manage your own tribe. A tribe that together has the
             power to create new affordable solutions in childcare that work for
             you and your community.
           </p>
-          <a href="http://" className="text-secondary">
-            Ready to get started?
-          </a>
+          <Link href="/">
+            <a className="text-secondary underline font-medium">
+              Ready to get started?
+            </a>
+          </Link>
         </div>
         <div className="flex-none">
           <Image
             src="/images/ImageSection1.png"
+            blurDataURL="/images/ImageSection1.png"
             alt="Section 1 Image"
             height="392"
             width="584"
+            placeholder="blur"
           />
         </div>
       </div>

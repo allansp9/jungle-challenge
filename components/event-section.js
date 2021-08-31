@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function EventSection() {
   return (
@@ -7,17 +8,17 @@ function EventSection() {
         <Image
           src="/images/ProfileImage.png"
           alt="Profile Image"
+          priority={true}
           height="56"
           width="56"
           className="rounded-full dp1"
         />
       </div>
-      <a
-        href="http://"
-        className="text-secondary px-[74px] my-3 text-center desktop:p-0"
-      >
-        Sarah’s day care available now in North Sydney
-      </a>
+      <Link href="/">
+        <a className="text-secondary px-[74px] my-3 text-center underline font-medium desktop:p-0 desktop:pr-2">
+          Sarah’s day care available now in North Sydney
+        </a>
+      </Link>
       <h4 className="hidden desktop:inline-block">
         Wednesday, Thursday, Friday - 7:30 - 5:30
       </h4>

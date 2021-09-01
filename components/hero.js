@@ -130,12 +130,14 @@ function Hero() {
 
       <Image
         src="/images/Image@3x.png"
+        blurDataURL="/images/Image@3x.png"
         alt="Hero background Image"
         // height="1848"
         // width="4320"
         layout="fill"
         quality="50"
         priority={true}
+        placeholder="blur"
         objectFit="cover"
         objectPosition="center top"
         className="hero-bg"
@@ -149,8 +151,10 @@ function Hero() {
           <div className="hidden laptop:block">
             <Image
               src="/images/ImageHeader.png"
+              blurDataURL="/images/ImageHeader.png"
               alt="Hero Image"
               priority={true}
+              placeholder="blur"
               height="290"
               width="316"
               layout="fixed"
